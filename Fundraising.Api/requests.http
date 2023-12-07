@@ -1,0 +1,40 @@
+POST http://localhost:5140/campaigns/campaigns
+Content-Type: application/json
+
+{
+    "name": "Weihnachten 2023"
+}
+
+###
+PATCH http://localhost:5140/campaigns/1
+Content-Type: application/json
+
+{
+    "name": "Christmas 2023"
+}
+
+###
+DELETE http://localhost:5140/campaigns/1
+
+###
+POST http://localhost:5140/campaigns/2/visits
+Content-Type: application/json
+
+{
+    "household": {
+        "townName": "Leonding",
+        "streetName": "Limesstraße",
+        "houseNumber": "12",
+        "familyName": "Müller"
+    },
+    "successfullyVisited": true
+}
+
+###
+POST http://localhost:5140/campaigns/2/visits
+Content-Type: application/json
+
+{
+    "householdId": 3,
+    "successfullyVisited": true
+}
